@@ -1,0 +1,82 @@
+js
+    - giving instrucrtor to a computer and the computer follows it 
+        - called code 
+
+document.body.innerHTML = 'hello';
+    - erase all content of the page and replace with 'hello'
+    - modify the webpage usage of JS 
+
+
+Order of operations
+* / are done first 
++ - are done after 
+(operator precedence)
+note:  
+- have the same priority
+- calculate from left to right if both present 
+- () -> control which part gets done first 
+
+Best practice when calculating money:
+    = calculate in cents instead of dollars 
+    ex.:
+    dollars = 20.95 + 7.99
+    cents   = 2095 + 799
+    convert back to dollars: (2095 + 799) / 100 = 28.94 
+
+note:
+Calculations with floats are sometimes inaccurate.
+When working with money:
+1. Do the calculation in cents
+2. Convert back to dollars 
+
+How to round a number:
+
+
+STRING
+type coercion = automatic type conversion 
+ex. 'hello' + 3 == 'hello3'
+    - 3 is automatically converted to string 
+
+
+character: 
+1. letter (a, b, c)
+2. number (1,2,3)
+3. symbol (!,@,#)
+4. Escape Character 
+    - \' = count as a one character in str -> no meaning
+        ex.: 'I\'m learning JS'
+    - \" = double quote that is just text 
+    - \n == newline character 
+
+
+3 ways to create a string JS
+1. '...' 
+note:
+- recommended to use '...' - used by default 
+    - easier to read and type 
+- but if there's a single quote in the str, used "..." 
+
+2. "..."
+
+3. `...` - backticks
+    = template strings => str created with backticks 
+        - has special features:
+            a. interpolation -> insert a value directly into a string (interpolation > concatenation)
+                ${} -> insert a value directly into a string -> format 
+                ex.: `Items (${1 + 1}: $${(2095 + 799) / 100})`
+                     'Items (2: $28.94)'
+            b. Multi-line Strings
+            ex.: `some
+                  text`
+            
+            
+'...' vs `...`
+What should we used to create string?
+1. Use '...' by default
+2. If we need  interpolation, multi-line string use `...` 
+
+
+VARIABLES
+
+
+

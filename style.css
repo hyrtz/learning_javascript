@@ -1,0 +1,28 @@
+
+.violet-bttn {
+  background-color: blueviolet;
+  border-radius: 20px;
+  padding: 4px 20px;
+}
+
+.red-bttn {
+  background-color: red;
+  border-radius: 20px;
+  padding: 4px 20px;
+}
+
+.yellow-bttn {
+  background-color: yellow;
+}
+
+.orange-bttn {
+  background-color: orange;
+}
+
+.add-to-cart-bttn {
+  background-color: yellow;
+}
+
+.buy-now-bttn {
+  background-color: orange;
+}
