@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <button class="show-quantity-bttn" onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Show Quantity
+    </button>
+
+    <button class="add-to-cart-bttn" onclick="
+      cartQuantity++;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Add to Cart
+    </button>
+
+    <button class="plus-two-bttn" onclick="
+      cartQuantity += 2;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      +2
+    </button>
+
+    <button class="plus-three-bttn" onclick="
+      cartQuantity += 3;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      +3
+    </button>
+
+    <button class="reset-cart-bttn" onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Reset Cart
+    </button>
+
+
+    <script>
+      // varible to save the cart quantity
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>
+
+<!-- 
+  1. We need somewhere to save the cart quantity. 
+
+ -->
