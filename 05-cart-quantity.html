@@ -35,12 +35,52 @@
       +3
     </button>
 
+    <!-- New exercises -->
+    <button class="plus-four-bttn" onclick="
+      cartQuantity += 4;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      +4
+    </button>
+    
+    <button class="plus-five-bttn" onclick="
+      cartQuantity += 5;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+   ">
+      +5
+    </button>
+
     <button class="reset-cart-bttn" onclick="
       cartQuantity = 0;
       console.log('Cart was reset.');
       console.log(`Cart Quantity: ${cartQuantity}`);
     ">
       Reset Cart
+    </button>
+
+    <button class="remove-from-cart-bttn" onclick="
+      cartQuantity--;
+      console.log(`Cart Quantity: ${cartQuantity}`); 
+      if (cartQuantity <= 0) {
+        cartQuantity = 0; 
+        console.log('Your cart is empty.');
+      }
+    ">
+      Remove from cart
+    </button>
+
+    <button class="minus-two-bttn" onclick="
+      cartQuantity -= 2;
+      console.log(`Cart Quantity: ${cartQuantity}`); 
+    ">
+      -2 
+    </button>
+
+    <button class="minus-three-bttn" onclick="
+      cartQuantity -= 3;
+      console.log(`Cart Quantity: ${cartQuantity}`); 
+    ">
+      -3 
     </button>
 
 
