@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <p> 
+      <button class="seven-bttn" onclick="
+        calculation += 7;
+        console.log(calculation);
+      ">
+        7
+      </button>
+
+      <button class="eight-bttn" onclick="
+        calculation += 8;
+        console.log(calculation);
+      ">
+        8
+      </button>
+
+      <button class="nine-bttn" onclick="
+        calculation += 9;
+        console.log(calculation);
+      ">
+        9
+      </button>
+
+      <button class="multiply-bttn" onclick="
+        calculation += ' * ';
+        console.log(calculation); 
+      ">
+        x
+      </button>
+    </p>
+
+    <p> 
+      <button class="four-bttn" onclick="
+        calculation += 4;
+        console.log(calculation);
+      ">
+        4
+      </button>
+
+      <button class="five-bttn" onclick="
+        calculation += 5;
+        console.log(calculation);
+      ">
+        5
+      </button>
+
+      <button class="six-bttn" onclick="
+        calculation += 6;
+        console.log(calculation);
+      ">
+        6
+      </button>
+
+      <button class="minus-bttn" onclick="
+      calculation += ' - ';
+      console.log(calculation); 
+    ">
+      -
+    </button>
+
+    </p>
+
+    <p> 
+      <button class="one-bttn" onclick="
+        calculation += 1;
+        console.log(calculation);
+      ">
+        1
+      </button>
+
+      <button class="two-bttn" onclick="
+        calculation += 2;
+        console.log(calculation);
+      ">
+        2
+      </button>
+
+      <button class="three-bttn" onclick="
+        calculation += 3;
+        console.log(calculation);
+      ">
+        3
+      </button>
+
+      <button class="plus-bttn" onclick="
+        calculation += ' + ';
+        console.log(calculation);
+      ">
+        +
+      </button>
+    </p>
+
+    <p>
+      
+
+      <button class="zero-bttn" onclick="
+        calculation += 0;
+        console.log(calculation);
+      ">
+        0
+      </button>
+  
+      <button class="equals-bttn" onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">
+        =
+      </button>
+    </p>
+
+    
+    <script>
+      let calculation = '';
+    </script>
+
+    
+  </body>
+</html>
