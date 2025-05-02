@@ -77,6 +77,32 @@ What should we used to create string?
 
 
 VARIABLES
+semicolon insertion 
+    - js try to automatically assigned ; when it's not present 
+
+Variable Re-assognment Shortcuts
++= 2    variable = variable + 2
+-= 2    variable = variable - 2
+*= 2    variable = variable * 2
+/= 2    variable = variable / 2
+++      variable = variable + 1
+--      variable = variable - 1
+
+typeof
+    - to know the var type of a var
+    
+3 ways to create variable in JS
+1. let
+    - use let if need to change the value of var 
+    - value can be change
+2. const 
+    - used by default
+    - can't change its value later 
+    - make var safer and easier to understand 
+3. var 
+    - variable
+    - has some issues == not used anymore in modern JS
+
 
 
 
