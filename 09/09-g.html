@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9: DOM Projects</title>
+  </head>
+  <body>
+
+    <!-- shipping calculator -->
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping.</p>
+    <p>Orders above $40 = FREE Shipping.</p>
+
+    <input type="number" placeholder="Cost of order" 
+      class="js-cost-input" onkeydown="handleCostKeydown(event);"/>
+
+    <button onclick="calculateTotalShipping();">Calculate</button>
+    <p class="js-total-cost"></p>
+
+
+    <input class="js-text-input" placeholder="Type something" onkeyup="
+      displayTextOnPage();
+    ">
+    <p class="js-text"></p>
+
+    <script>
+
+      // display input in real-time 
+      function displayTextOnPage() {
+        const inputElement = document.querySelector('.js-text-input');
+        const inputValue = inputElement.value
+        document.querySelector('.js-text').innerHTML = inputValue;
+      }
+
+      // enter key 
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotalShipping();
+        }
+      }
+
+      // shipping calculator 
+      function calculateTotalShipping() {
+        const inputElement = document.querySelector('.js-cost-input');
+
+        let cost = Number(inputElement.value);  
+      
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        let finalCost = cost.toFixed(2);
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${finalCost}`;
+      }
+      
+    </script>
+  </body>
+</html>
+
+<!-- 
+when button is clicked: 
+  get input from text box 
+  compare input   
+    if amount < $40, add $10 
+  display total on page   -->

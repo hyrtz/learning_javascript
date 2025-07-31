@@ -22,17 +22,18 @@
       Tails
     </button>
 
-    <button class="see-prev-scores-bttn" onclick="
+    <p class="js-player-move"></p>
+    <p class="js-computer-move"></p>
+    <p class="js-game-result"></p>
+
+    <!-- <button class="see-prev-scores-bttn" onclick="
       alert(`Wins: ${score.wins}, Losses: ${score.losses}`);
     ">
       See previous score
-    </button>
-
-
+    </button> -->
 
 
     <script>   
-      // const score = JSON.parse(localStorage.getItem('score'));
 
       // default is use when object has no value/empty (e.g.: resetting/deleting score)
       let score = JSON.parse(localStorage.getItem('score')) || {
@@ -40,7 +41,8 @@
         losses: 0
       }; 
 
-      
+      updateScoreElememt();  // display prev score 
+
       function playGame(guess) {
         const computerMove = pickComputerMove();
         let result = ''; 
@@ -67,9 +69,20 @@
 
         localStorage.setItem('score', JSON.stringify(score));
 
-        alert(`You pick ${guess}. Result is ${computerMove}. ${result}\n Wins: ${score.wins}, Losses: ${score.losses}`);
+        // display player move
+        document.querySelector('.js-player-move')
+          .innerHTML = `You pick ${guess}. Result is ${computerMove}.`;
+        
+        updateScoreElememt(); // display updated score  
       }
 
+      function updateScoreElememt() {
+        // display score
+        document.querySelector('.js-game-result')
+          .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}`;
+      }
+
+      
       // computer move
       function pickComputerMove() {
         const randomNumber = Math.random();
@@ -87,3 +100,10 @@
     </script>
   </body>
 </html>
+
+<!-- 
+when user picked a move
+display move picked 
+display computer move 
+display game result 
+ -->

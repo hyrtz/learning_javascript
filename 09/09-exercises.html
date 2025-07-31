@@ -8,9 +8,58 @@
   <body>
 
     <button>9a</button>
+    <button class="js-9b-button">9b</button>
+
+    <p>
+      <button class="js-heads-button" onclick="
+        playGame('heads');
+      ">heads</button>
+
+      <button class="js-tails-button" onclick="
+        playGame('tails');
+      ">tails</button>
+
+      <p class="js-game-result"></p>
+    </p>
+
+    <input class="js-input" placeholder="Enter your name" onkeydown="handleCostKeydown(event)">
+    <button class="js-submit-button" onclick="displayName();">Submit</button>
+    <p class="js-display-name"></p>
+
 
     <script>
+
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          displayName();
+        }
+      }
+
+      function displayName() {
+        const inputElement = document.querySelector('.js-input')
+        let name = inputElement.value;
+
+        document.querySelector('.js-display-name').innerHTML = `Your name is: ${name}`;
+      }
+
+      function playGame(move) {
+        if (move === 'heads') {
+          document.querySelector('.js-game-result').innerHTML = `You chose: ${move}`;
+        } else if (move === 'tails') {
+          document.querySelector('.js-game-result').innerHTML = `You chose: ${move}`;
+        }
+      }
+
+      const buttonElement = document.querySelector('button');
+      console.log(buttonElement);
+
+      const button9bElement = document.querySelector('.js-9b-button')
+        .innerHTML = '9b done!';
+
+      
+
     
+
     </script>
   </body>
 </html>
