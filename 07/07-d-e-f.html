@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7 (Functions): Exercises </title>
+    <!-- <script defer src="script.js"></script> -->
+  </head>
+  <body>
+
+    <script>   
+
+      // reusing prev funcitions 
+      function convertTemperature(degrees, unit) {
+        let result = ''; 
+        let convertedTemperture = ''; 
+       
+        if (unit === 'C') {
+          const fahrenheit = convertToFahrenheit(degrees);
+          convertedTemperture = console.log(`${fahrenheit}F`);
+          return convertedTemperture;
+
+        } else if (unit === 'F') {
+          const celcius = convertToCelcius(degrees);
+          convertedTemperture = console.log(`${celcius}F`);
+          return convertedTemperture;
+        }
+      }
+      
+      convertTemperature(25, 'C');
+      convertTemperature(86, 'F');
+
+      function convertToFahrenheit(celcius) {
+        const fahrenheit = (celcius * 9/5) + 32;
+        return fahrenheit; 
+      }
+      console.log(convertToFahrenheit(25));
+
+      function convertToCelcius(fahrenheit) {
+        const celcius = (fahrenheit - 32) * 5/9;
+        return celcius; 
+      }
+      console.log(convertToCelcius(86));
+
+    </script>
+  </body>
+</html>
+
+
+<!-- 
+
+1. enter degree and unit
+  if unit === C
+    convert degreee to fahrenheit 
+  else if unit === f
+    convert degreee to celcuis
+
+
+-->

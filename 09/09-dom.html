@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9: DOM (Document Object Model)</title>
+  </head>
+  <body>
+
+    <button>hello</button>
+    <button class="js-bttn">second bttn</button>
+
+    <script>
+      // the str tells JS which html element to get from the page 
+      // using this method, it allows us to change the part that need to be change 
+      document.querySelector('button'); // gets the 1st button and put it inside JS 
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button')
+        .innerHTML = 'changed';
+
+      // how to get the second button
+        // sol'n: add a class = "..." attr 
+      const buttonElement = document.querySelector('.js-bttn');
+      console.log(buttonElement);
+      console.log(jsButton.innerHTML);
+
+
+      /* 
+      console.log(document.title);
+      document.title = 'changed';
+
+      // putting the html body element inside JS
+      // the html element is converted in JS object
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML );
+      document.body.innerHTML = '<button>good job</button>';
+
+      // using this code, the doc and webpage is linked together 
+      document.body.innerHTML = 'hell0';
+      document.title = 'ggod job';  // change tab title 
+      */
+    </script>
+  </body>
+</html>

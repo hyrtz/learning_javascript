@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8: Objects</title>
+  </head>
+  <body>
+
+    <script>
+
+      /* 
+      // object sample 
+      const product = {
+        name: 'socks',    // property value pair
+        price: 1090,
+      };
+
+      // accessing property value using dot notation 
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price)
+
+      // changing property value 
+      product.name = 'cotton socks';
+      console.log(product);
+      console.log(product.name);
+
+      // adding new property 
+      product.newProperty = true;
+      console.log(product);
+
+      // deleting propety 
+      delete product.newProperty;
+      console.log(product);
+      */ 
+
+      /* 
+      // other way to access value inside object using [] called bracket notation
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1() {
+          console.log('function inside object');
+        }
+      };
+      console.log(product2);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+
+      console.log(product2.rating.stars);
+      console.log(product2.rating.count);
+
+      product2.fun(); // running the funcion inside the object 
+
+      // method sample 
+      // log is a function stored inside console object 
+      console.log(typeof console.log);
+      // Math.random();
+
+      // JSON 
+      // converting JS object into JSON
+      const jsonString = JSON.stringify(product2);    // stringify -> results in a string 
+      console.log(jsonString);
+
+      // converting JSON to JS object 
+      // using JSON.parse()
+      const jsonToJSObject = JSON.parse(jsonString);
+      console.log(jsonToJSObject);
+
+      // another example
+      console.log(object1.message);
+
+      const toJSON = JSON.stringify(object1);
+      console.log(toJSON);
+
+      const toJsObj = JSON.parse(toJSON);
+      console.log(toJsObj);    
+      */ 
+
+      console.log('heelo'.length);
+      console.log('heLlo'.toUpperCase());
+      console.log('hello'.toLowerCase());
+
+      /* the content is stored somewhere in computer'smemory and 
+      the variable just gets a reference pointing to that computer's memory */ 
+      const object1 = {
+        message: 'hello'
+      };
+
+      // makes a copy of the reference that points to the object 
+      // called Copy By reference 
+      const object2 = object1;  // have the same reference 
+
+      object1.message = 'good job';
+      console.log(object1); // note: in object, we can still the value even though we're using const
+
+      console.log(object2);
+
+      const object3 = {
+        message: 'good job'
+      };
+
+      console.log(object3 === object1); 
+        // false (not the same reference) -> compares the reference not the values inside, 
+
+      console.log(object1 === object2); // true, have the same reference 
+
+      const object4 = {
+        message: 'good work',
+        price: 799
+      };
+
+      // const message = object4.message; 
+      // shortcut for storing object (like code above) in var called 'destructuing'
+        // can be used for multiple properties 
+      const { message, price } = object4;
+        // takes the message property out the object4 
+        // and save in the var called message 
+      console.log(message);
+      console.log(price);
+
+      // shortcut: shorthand property 
+      const object5 = {
+        // message: message
+        // if property and var name is the same, you can just type it once 
+        message,
+        // shortcut: shorthand method 
+        // method: function funcion1() {
+        //   console.log('method');
+        // }
+        // the function name is not needed 
+        method() {
+          console.log('method');
+        }
+
+      };
+
+      console.log(object5);
+      object5.method();
+
+
+                      
+
+
+      
+      
+
+      
+
+
+
+
+    </script>
+  </body>
+</html>

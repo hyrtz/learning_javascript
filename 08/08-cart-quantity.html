@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <button class="show-quantity-bttn" onclick="
+      alert(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Show Quantity
+    </button>
+
+    <button class="add-to-cart-bttn" onclick="
+      updateCartQuantity(1);
+    ">
+      Add to Cart
+    </button>
+
+    <button class="plus-two-bttn" onclick="
+      updateCartQuantity(2);
+    ">
+      +2
+    </button>
+
+    <button class="plus-three-bttn" onclick="
+      updateCartQuantity(3);
+    ">
+      +3
+    </button>
+
+    <!-- New exercises -->
+    <button class="plus-four-bttn" onclick="
+      updateCartQuantity(4);
+    ">
+      +4
+    </button>
+    
+    <button class="plus-five-bttn" onclick="
+      updateCartQuantity(5);
+   ">
+      +5
+    </button>
+
+    <button class="reset-cart-bttn" onclick="
+      cartQuantity = 0;
+      alert(`Cart was reset.\nCart Quantity: ${cartQuantity}`);
+    ">
+      Reset Cart
+    </button>
+
+    <button class="remove-from-cart-bttn" onclick="
+      updateCartQuantity(-1);
+    ">
+      Remove from cart
+    </button>
+
+    <button class="minus-two-bttn" onclick="updateCartQuantity(-2);">-2 </button>
+
+    <button class="minus-three-bttn" onclick="
+      updateCartQuantity(-3);
+    ">
+      -3 
+    </button>
+
+    <script>
+      // nasa labas cause it needs to be updated 
+      // let cartQuantity = 0;
+
+      let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0 ;
+
+      function updateCartQuantity(change) {
+        const maxQuantity = 10;
+        const minQuantity = 0;
+        let result = '';
+
+        if (cartQuantity + change > maxQuantity) {
+          result = alert('The cart is full.');
+          return result;
+          
+        } else if (cartQuantity + change < minQuantity) {
+          result = alert(`Not enough items in the cart.\nCart Quantity: ${cartQuantity}`); 
+          return result;
+         
+        } else {
+          cartQuantity += change;
+          result = alert(`Cart Quantity: ${cartQuantity}`); 
+        }
+
+        localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+      }
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+<!-- 
+  1. We need somewhere to save the cart quantity. 
+
+  1. add to cart
+  2. check is cart quantity is === or not 10 
+    if cq === 10
+      cart is full
+    else
+      add to cart
+
+
+ -->

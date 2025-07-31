@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Functions</title>
+  </head>
+  <body>
+
+    <script>
+
+      /* 
+      // this creates a function, but doesn't run the code inside
+      // using verb/action om the name of the function
+      function function1() {
+        console.log('hello');
+        console.log(2 + 2);
+      }
+
+      // calling function to run the code inside 
+      function1();
+      function1();
+      */
+
+      // cost = 6000;
+
+      // functions using parameters
+      function calculateTax(cost, taxPercent = 0.1) { // function takes a parameter 
+        console.log(cost * taxPercent);
+      }
+
+      // passingv value into the funcfion 
+      // yung 2000/5000 or yung vlaue passed is called argument 
+      calculateTax(2000, 0.2);
+      calculateTax(5000, 0.3);
+      calculateTax(10); 
+
+
+
+
+    </script>
+  </body>
+</html>

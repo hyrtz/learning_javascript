@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7 (Functions): Coin Flip Game </title>
+    <!-- <script defer src="script.js"></script> -->
+  </head>
+  <body>
+    <p>Coin Flip Game</p>
+    <p>Pick your guess</p>
+
+    <button class="heads-bttn" onclick="
+      playGame('heads');
+    ">
+      Heads
+    </button>
+
+    <button class="tails-bttn" onclick="
+      playGame('tails');
+    ">
+      Tails
+    </button>
+
+
+    <script>   
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
+        let result = ''; 
+
+        // comparing result 
+        if (playerMove === 'heads') {
+          if (computerMove === 'heads') {
+            result = 'You win!'; 
+          } else {
+            result = 'You lose!'; 
+          } 
+
+        } else if(playerMove === 'tails') {
+          if (computerMove === 'tails') {
+            result = 'You win!'; 
+          } else {
+            result = 'You lose!'; 
+          }
+        }
+
+        alert(`You pick ${playerMove}. Result is ${computerMove}. ${result}`);
+      }
+
+      
+      // computer move
+      function pickComputerMove() {
+        const randomNumber = Math.random();
+        let computerMove = '';
+
+        if (randomNumber < 0.5) {
+          computerMove = 'heads';
+        } else {
+          computerMove = 'tails';
+        }
+
+        return computerMove;
+      }
+
+    </script>
+  </body>
+</html>

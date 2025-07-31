@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8 (Objects): Exercises </title>
+    <!-- <script defer src="script.js"></script> -->
+  </head>
+  <body>
+
+
+
+    <script>   
+      const product = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      console.log(product);
+
+      product.price = 2595;
+      console.log(product);
+
+      product['delivery time'] = '3 days';
+      console.log(product);
+
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+      
+      const product2 = {
+        name: 'football',
+        price: 1500
+      };
+
+
+      comparePrice(product1, product2);
+      isSameProduct(product1, product2);
+
+      /* 
+      function comparePrice(product1, product2) {
+
+        let result = '';
+        
+        if (product1.price < product2.price) {
+          // result = console.log('product1 is the less expensive.');
+          //return result;
+          result = product1;
+          return result;
+        } else if (product2.price < product1.price) {
+          // result = console.log('product2 is the less expensive.');
+          //return result;
+          result = product2;
+          return result;
+        }
+
+        // console.log(`${result} is less expensive`);
+
+        // return result;
+      }
+ 
+
+      function comparePrice(product1, product2) {
+
+        let result = '';
+        
+        if (product1.price < product2.price) {
+          result = console.log('product1 is the less expensive.');
+          //return result;
+        } else if (product2.price < product1.price) {
+          result = console.log('product2 is the less expensive.');
+        }
+
+        // console.log(`${result} is less expensive`);
+      }
+
+      */
+
+
+      function comparePrice(product1, product2) {
+        let result = '';
+        
+        if (product1.price < product2.price) {
+          return console.log('product1 is the less expensive.');
+        } else if (product2.price < product1.price) {
+          return console.log('product2 is the less expensive.');
+        }
+      }
+
+      function isSameProduct(product1, product2) {
+        if (product1.name === product2.name && product1.price === product2.price) {
+          return console.log(true);
+        } else {
+          return console.log(false);
+        }
+      }
+
+      const gm = 'Good Morning';
+      console.log(gm.toLowerCase());
+
+      const origString = 'test';
+      const repeatedString = origString.repeat(2);
+      console.log(repeatedString);
+
+    </script>
+  </body>
+</html>

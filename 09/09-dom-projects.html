@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9: DOM Projects</title>
+  </head>
+  <body>
+
+    <!-- yt subscribe -->
+    <p>YouTube Subscribe Button</p>
+     <button onclick="
+      subscribe();
+    " class="js-subscribe-bttn">
+      Subscribe
+    </button>
+
+    <!-- shipping calculator -->
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping.</p>
+    <p>Orders above $40 = FREE Shipping.</p>
+
+    <input type="number" placeholder="Cost of order" 
+      class="js-cost-input" onkeydown="handleCostKeydown(event);"/>
+
+    <button onclick="calculateTotalShipping();">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <script>
+
+      // number to string 
+      String(23)
+
+      // example of 'Type Coercion' -> automatic type conversion 
+      console.log('25' - 5);  // not recommended to do, just don't 
+
+      // everything inside the browser is inside the window 
+      // the webpage is inside window
+      // the document object is inside the window object 
+      // don't need to type window cus its automatic in JS 
+      window.document
+      window.console.log('window');
+      window.alert
+
+
+      // enter key 
+      function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotalShipping();
+        }
+      }
+
+      // shipping calculator 
+      function calculateTotalShipping() {
+        const inputElement = document.querySelector('.js-cost-input');
+
+        // get value/text from input (text box) hmtl element 
+        // let cost = inputElement.value;  // string, need to convert to int using Number()
+        let cost = Number(inputElement.value);  
+      
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost}`;
+      }
+      
+      // yt subscribe
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-bttn');
+        if (buttonElement.innerText === 'Subscribe') {  // .innerText -> gets the actual text 
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+when button is clicked: 
+  get input from text box 
+  compare input   
+    if amount < $40, add $10 
+  display total on page   -->

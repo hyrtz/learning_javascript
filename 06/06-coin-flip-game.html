@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Coin Flip Game</title>
+  </head>
+  <body>
+
+    <!-- 
+    
+    <p>Coin Flip Game</p>
+    <p>Pick your guess</p>
+
+    <button class="heads-bttn" onclick="
+      const randomNumber = Math.random(); 
+      let result = '';
+      
+      if (randomNumber < 0.5) {
+        result = 'heads';
+      } else {
+        result = 'tails';
+      }
+
+      let guess = ''; 
+      if (result === 'heads') {
+        guess = 'You win!'; 
+      } else {
+        guess = 'You lose!'; 
+      }
+
+      alert(`You pick heads. Result is ${result}. ${guess}`);
+    ">
+      Heads
+    </button>
+
+    <button class="heads-bttn" onclick="
+      const randomNumber1 = Math.random(); 
+      let result1 = '';
+      
+      if (randomNumber1 < 0.5) {
+        result1 = 'heads';
+      } else {
+        result1 = 'tails';
+      }
+
+      let guess1 = ''; 
+      if (result1 === 'tails') {
+        guess1 = 'You win!'; 
+      } else {
+        guess1 = 'You lose!'; 
+      }
+
+      alert(`You pick tails. Result is ${result1}. ${guess1}`);
+    ">
+      Tails
+    </button>
+     -->
+
+
+
+
+    <script>
+
+      /*
+      const randomNumber = Math.random(); 
+      let result = '';
+      
+      if (randomNumber < 0.5) {
+        result = 'heads';
+        // console.log('heads'); 
+      } else {
+        result = 'tails';
+        // console.log('tails'); 
+      }
+
+      // console.log(result)
+
+      let guess = 'tails'; 
+      let guessResult = '';
+      if (guess === result) {
+        guessResult = 'You win!'; 
+        // console.log('You win!');
+      } else {
+        guessResult = 'You lose!'; 
+        // console.log('You lose!');
+      }
+      console.log(guessResult);
+      // alert(guessResult);
+      */
+
+
+      // using ternary operators 
+      const randomNumber = Math.random(); 
+      let result = '';
+      
+      randomNumber < 0.5 ? result = 'heads' : result = 'tails';
+
+      /* 
+      if (randomNumber < 0.5) {
+        result = 'heads';
+      } else {
+        result = 'tails';
+      }
+        */ 
+
+      let guess = 'heads'; 
+      let guessResult = '';
+
+      guess === result ? guessResult = 'You win!' : guessResult = 'You lose!'; 
+
+      /* 
+      if (guess === result) {
+        guessResult = 'You win!'; 
+      } else {
+        guessResult = 'You lose!'; 
+      }
+      */ 
+      
+      console.log(guessResult);
+
+
+
+      
+
+
+    </script>
+  </body>
+</html>

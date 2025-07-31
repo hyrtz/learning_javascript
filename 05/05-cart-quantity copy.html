@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+
+    <button class="show-quantity-bttn" onclick="
+      result = alert(`Cart Quantity: ${cartQuantity}`);
+      // console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Show Quantity
+    </button>
+
+    <button class="add-to-cart-bttn" onclick="
+      if (cartQuantity === maxQuantity) {
+        result = alert('The cart is full');
+        // console.log('The cart is full');
+      } else {
+        cartQuantity++;
+        result = alert(`Cart Quantity: ${cartQuantity}`);
+        // console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+    ">
+      Add to Cart
+    </button>
+
+    <button class="plus-two-bttn" onclick="
+      if (cartQuantity === maxQuantity) {
+        result = alert('The cart is full');
+      } else {
+        cartQuantity += 2;
+        result = alert(`Cart Quantity: ${cartQuantity}`);
+      }
+    ">
+      +2
+    </button>
+
+    <button class="plus-three-bttn" onclick="
+      if (cartQuantity === maxQuantity) {
+        result = alert('The cart is full');
+      } else {
+        cartQuantity += 3;
+        result = alert(`Cart Quantity: ${cartQuantity}`);
+      }
+    ">
+      +3
+    </button>
+
+    <!-- New exercises -->
+    <button class="plus-four-bttn" onclick="
+      if (cartQuantity === maxQuantity) {
+        result = alert('The cart is full');
+      } else {
+        cartQuantity += 4;
+        result = alert(`Cart Quantity: ${cartQuantity}`);
+      }
+    ">
+      +4
+    </button>
+    
+    <button class="plus-five-bttn" onclick="
+      if (cartQuantity === maxQuantity) {
+        result = alert('The cart is full');
+      } else {
+        cartQuantity += 5;
+        result = alert(`Cart Quantity: ${cartQuantity}`);
+      }
+   ">
+      +5
+    </button>
+
+    <button class="reset-cart-bttn" onclick="
+      cartQuantity = 0;
+      result = alert('Cart was reset.');
+      // console.log('Cart was reset.');
+      // console.log(`Cart Quantity: ${cartQuantity}`);
+      result = alert(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Reset Cart
+    </button>
+
+    <button class="remove-from-cart-bttn" onclick="
+      cartQuantity--;
+      console.log(`Cart Quantity: ${cartQuantity}`); 
+      if (cartQuantity <= 0) {
+        cartQuantity = 0; 
+        console.log('Your cart is empty.');
+      }
+    ">
+      Remove from cart
+    </button>
+
+    <button class="minus-two-bttn" onclick="
+      if (cartQuantity <= minQuantity) {
+        result = alert('Not enough items in the cart.'); 
+      } else {
+        cartQuantity -= 2;
+        result = alert(`Cart Quantity: ${cartQuantity}`); 
+        // console.log(`Cart Quantity: ${cartQuantity}`); 
+      }
+    ">
+      -2 
+    </button>
+
+    <button class="minus-three-bttn" onclick="
+      if (cartQuantity <= minQuantity) {
+        result = alert('Not enough items in the cart.'); 
+      } else {
+        cartQuantity -= 3;
+        result = alert(`Cart Quantity: ${cartQuantity}`); 
+      }
+    ">
+      -3 
+    </button>
+
+    <script>
+      // varible to save the cart quantity
+      let cartQuantity = 0;
+      const maxQuantity = 10;
+      const minQuantity = 0;
+      let result = '';
+    </script>
+  </body>
+</html>
+
+<!-- 
+  1. We need somewhere to save the cart quantity. 
+
+  1. add to cart
+  2. check is cart quantity is === or not 10 
+    if cq === 10
+      cart is full
+    else
+      add to cart
+
+
+ -->

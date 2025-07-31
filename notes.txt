@@ -106,3 +106,196 @@ typeof
 
 
 
+L6: BOOLEAN AND IF-STATEMENTS
+BOOLEAN
+ - true and false 
+
+ purpose
+ - represent whether something is true or false 
+
+ comparison operators (has lower priority than math operators);
+ ==
+    - tries to convert both values to be the same type
+ ===,!==
+    -  to check if 2 values are the same
+    - to avoid conversion behavior of == 
+
+TRUTHY AND FALSY VALUES
+truthy -> behave just like true
+falsy ->  behave just like false
+    falsy values 
+        - false, 0, '', NaN (Not a Number -> occurs when invalid math happened), undefined, null 
+        - any value not on this list is truthy 
+why use truthy and falsy values?
+    - used shortcut in our code
+
+also works with logical operators
+
+
+
+IF-STATEMENTS
+- lets us write multiple groups of code
+- and then decide which code to run 
+- scope
+    - a scope limits where a variable exists
+    - avoid naming conflicts
+
+
+shortcuts for if-statements
+1. Ternary operator ?: -> it can be saved in a variable
+2. Guard operator &&
+    - ex. false && value2
+    - stops early 
+    - does not need to run the code on the right
+    - it called "Short-circuit evaluation" 
+3. Default operator || (OR)
+    - value1 || value2
+    - checks if at least 1 side is truthy
+
+
+
+
+L7: FUNCTIONS
+Function
+    - a function lets us reuse code
+    - makes updating code easy 
+
+Return Statements 
+    - lets us get a value out of a function
+    - ends the function immediately
+    - we can return:
+        - value
+        - calculation
+        - variable
+        - or anything that result in a value 
+
+Tracing the code
+    - following the code line-by-line 
+
+
+Best practice
+    - Keep variables inside a scope (if we can) 
+
+Parameters
+    - puts a value into a function
+    - opposite of return 
+    - only exists inside the function scope
+
+
+
+L8: OBJECTS 
+Objects
+    - let us group multiple values together 
+    - let us use multiple values together 
+    - can save anytime of value inside an object
+
+Property 
+    - can be used to access value in the object
+    - used to change the value 
+
+Why use objects?
+    - makes code more organized 
+
+Dot notation
+    - default way of accessing property value in objects 
+
+Bracket notation
+    - Bracket notation is use when properties don't work with dot notation 
+    - inside the bracket, we can place: 
+        - variable
+        - calculation
+        - another object
+        - function
+        - or anything that has a value 
+
+Dot notation or bracket notation?
+    - Dot notation -> use by default
+    - Bracket notation -> for properties that don't work, use bracket notation
+
+Method
+    - function inside object 
+
+2 More built-in Objects
+1. JSON (JavaScript Object Notation)
+    - a syntax 
+    - similar to JS objects but has less features 
+    - use double quotes (""), don't use functions 
+    - JSON is more universal than JS objects (as JS object only exist in JS)
+
+    Convert: JS object -> JSON
+
+    We use JSON when:
+        - we send data between computers 
+        - we store data 
+
+2. localStorage
+    - save values more permanently 
+    - it only supports string
+    - localStorage.setItem();
+
+
+    Saving in variable
+        - storing in values in variables are temporary 
+        - if page is refresh/close, all variables are deleted 
+
+More details about objects
+    - null 
+        - used when intentionally want something to be empty
+        - in some cases, null and undefined works the same 
+
+Auto-Boxing
+    - JS automatically wrap a string,numbers, and booleans in an object
+    - not works in null or undefined
+
+Remember: 
+Objects are references. 
+We can't compare objects directly.
+
+Shortcuts for objects
+
+
+
+L9: DOM (Document Object Model)
+DOM
+    - a built-in object called 'document object' 
+        - the document object represents/model the webpage 
+    - also has methods 
+    - combines HTML AND JS together
+    - we can have HTML elements inside JS 
+
+
+    Methods (function saved inside an object)
+    * document.querySelector()
+        - get any element from the page and put it inside JS 
+    
+    note: 
+        - every html element has a .innerHTML Property
+        - onkeydown = '...' -> runs JS when we pressed keydown on keyboard
+        - whenever we get a value from the DOM, the value will be a string 
+    
+    common practice:
+        - start the class w/ 'js-' 
+            - to make it clear that the class is being used in JavaScript
+        - use 'Elem' / 'Element' at the end name of a var to make it clear that 
+          there is an HTML element inside the var 
+
+    Remember: 
+        - clicks, keydowns => events
+        - onclick, onkeydown => event listeners 
+            - check for events 
+            - and run JS when those events happened 
+            - every event listener gets an event object 
+
+Window Object
+    - represents the browser 
+    
+        
+
+
+
+
+
+    
+
+
+
