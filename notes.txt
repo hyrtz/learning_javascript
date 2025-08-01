@@ -291,7 +291,9 @@ Window Object
     
         
 
-
+L10: ADDING CSS TO PROJECTS 
+.classList 
+    - gives us control of the class attribute 
 
 
 

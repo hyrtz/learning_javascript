@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #191919;
+  color: #fff;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.move-icon {
+  height: 3rem;
+}
+
+.move-bttn {
+  background-color: transparent;
+  border: 3px solid #fff;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4rem;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.score {
+  margin-top: 3rem;
+}
+
+
+.reset-score-bttn {
+  background-color: #fff;
+  border: none;
+  padding: .6rem 1.2rem;  
+  font-size: 1rem;
+}

@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+
+:root {
+  --primary: #6D6E6D;
+  --secondary: #3B3B3B;
+  --operations: #FF9500;
+  --light: #FFFFFF;
+  --dark: #101010;
+
+}
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark);
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.calculator-container {
+  margin-top: 2rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+
+.title-container {
+  margin-top: 2rem;
+  /* text-align: center; */
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+
+.display-calculation {
+  border-radius: 0px;
+  height: 2.5rem;
+  width: 10.7rem;
+  margin-bottom: 1rem;
+  border: none;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+
+::placeholder {
+  color: #fff;
+  opacity: 1; 
+}
+
+  
+.bttn, .clear-bttn {
+  background-color: var(--secondary);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  margin-bottom: .5rem;
+}
+
+.operation-bttn {
+  background-color: var(--operations);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+}
+
+.clear-bttn {
+  font-size: .6rem;
+}
+

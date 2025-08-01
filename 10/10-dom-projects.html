@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10: DOM Projects</title>
+    <link rel="stylesheet" href="/styles/10-dom-projects.css">
+    <script defer src="/scripts/10-dom-projects.js"></script>
+  </head>
+  <body>
+
+    <!-- yt subscribe -->
+    <p>YouTube Subscribe Button</p>
+     <button onclick="
+      subscribe();
+    " class="js-subscribe-bttn subscribe-bttn"> 
+      Subscribe
+    </button>
+
+    <!-- shipping calculator -->
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping.</p>
+    <p>Orders above $40 = FREE Shipping.</p>
+
+    <input type="number" placeholder="Cost of order" 
+      class="js-cost-input cost-input" onkeydown="handleCostKeydown(event);"/>
+
+    <button class="calculate-bttn" onclick="calculateTotalShipping();">Calculate</button>
+    <p class="js-total-cost"></p>
+  </body>
+</html>

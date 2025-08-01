@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="/styles/10-calculator.css">
+    <script defer src="/scripts/10-calculator.js"></script>
   </head>
   <body>
     <div class="title-container">
@@ -12,17 +13,9 @@
     </div>
 
     <div class="calculator-container">
-      <p class="js-display-calculation">0</p>
+      <p class="js-display-calculation display-calculation">0</p>
 
       <p> 
-        <button class="clear-bttn" onclick="
-          calculation = 0;
-          localStorage.removeItem('calculation');
-          displayCalculation();
-        ">
-          C
-        </button>
-
         <button class="bttn" onclick="
           updateCalculation(7);
         ">
@@ -129,25 +122,15 @@
           /
         </button>
       </p>
-    </div>
-    
-    <script>
-      let calculation = JSON.parse(localStorage.getItem('calculation')) || '';
-
-      function displayCalculation() {
-        document.querySelector('.js-display-calculation').innerHTML = calculation;
-      }
-      
-      function updateCalculation(operator) {
-        if (true) {
-          calculation += operator;
-          document.querySelector('.js-display-calculation').innerHTML = calculation;
-        } 
-
-        localStorage.setItem('calculation', JSON.stringify(calculation));
-      }
-    </script>
-
-    
+      <p>
+        <button class="clear-bttn" onclick="
+          calculation = 0;
+          localStorage.removeItem('calculation');
+          displayCalculation();
+        ">
+          Clear
+        </button>
+      </p>
+    </div> 
   </body>
 </html>
