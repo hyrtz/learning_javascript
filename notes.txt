@@ -298,6 +298,45 @@ L10: ADDING CSS TO PROJECTS
 
 
     
+L11: ARRAYS AND LOOPS
+Arrays 
+    - is an object (it's a special type of object)
+
+Loops 
+    - let us run some code over and over 
+
+2 types of loops in JS
+1. while loop
+2. for loop
+
+While vs For Loop
+standard loop => for
+non-standard loop => while 
+    - cuz while loop is a bit more flexible 
+    - ex.: generate random numbers until one that's atleast 0.5
+
+
+Accumulator Pattern:
+steps:
+1. Create an var to store the result
+2. Loop through the array and update the result
+
+
+STANDARD PROCESS OF GENERATING WEBSITE 
+MAIN IDEA OF JavaScript
+Steps in Generating website in JS 
+1. Save the data 
+2. Use data to generate HTML 
+3. Make it interactive 
+
+Arrays are References 
+
+More details about loops
+1. break = exit a loop early 
+2. continue = skip 1 iteration
+
+
+
 
 
 

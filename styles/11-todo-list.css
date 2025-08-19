@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+* {
+  font-family: Poppins;
+}
+
+.title {
+  font-size: 20px;
+}
+.todo-grid, 
+.todo-input-grid {
+  display: grid;
+  /* sets how many columns are in the grid */
+  grid-template-columns: 200px 150px 100px; 
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.todo-input-grid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+.name-input,
+.due-date-input {
+  padding: .5rem;
+  font-size: 14px;
+}
+
+.add-todo-button,
+.delete-todo-button {
+  padding: 10px 0px 10px 0px;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-todo-button {
+  background-color: #008001;
+}
+
+.delete-todo-button {
+  background-color: #8B0000;
+}
+
+.name-todo,
+.due-date-todo {
+  font-size: 14px;
+}
